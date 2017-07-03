@@ -1,8 +1,11 @@
-.comment
-  %p= comment.comment
-  %p
-    Replied by
-    %strong= comment.user.email
-  -if comment.user == current_user
-    = link_to "Edit", edit_post_comment_path(comment.post, comment)
-    = link_to "Delete Reply", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }
+.comment.clearfix
+  .content
+    %p= comment.comment
+    %p
+      Replied by
+      %strong= comment.user.email
+
+  .buttons
+    -if comment.user == current_user
+      = link_to "Edit", edit_post_comment_path(comment.post, comment), class: "button"
+      = link_to "Delete Reply", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "button"

@@ -19,6 +19,25 @@ body {
   background: #EDEFF0;
 }
 
+.notice {
+  text-align: center;
+  color: #3bb13b;
+}
+
+.alert {
+  text-align: center;
+  color: #fd2323;
+}
+
+hr {
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #d1d1d1;
+    margin: 1em 0;
+    padding: 0;
+}
+
 .wrapper {
   width: 60%;
   max-width: 1140px;
@@ -89,6 +108,19 @@ body {
 	}
 }
 
+.button {
+	color: #397CAC;
+	border: 1px solid #397CAC;
+	padding: .5em 1em;
+	border-radius: 0.2em;
+	text-decoration: none;
+	margin-right: 2%;
+  &:hover {
+    color: #fff;
+    background-color: #397CAC;
+  }
+}
+
 #post_content {
 	background: white;
 	padding: 2em 5%;
@@ -128,6 +160,10 @@ body {
 					text-decoration: none;
 					margin-right: 2%;
 				}
+        a:hover {
+          color: #fff;
+          background-color: #397CAC;
+        }
 			}
 			.comment_content {
 				margin: 0;
@@ -155,5 +191,11 @@ body {
 			border-radius: .2em;
 			margin: 1em 0;
 		}
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
   }
 }
