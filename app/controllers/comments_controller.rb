@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post
     else
-      render "new"
+      redirect_to @post, alert: "Error while saving your comment, please try again!!"
     end
   end
 
